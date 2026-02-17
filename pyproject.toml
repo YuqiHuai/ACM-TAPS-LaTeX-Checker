@@ -1,0 +1,55 @@
+[project]
+name = "acm-taps-packages"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Yuqi Huai",email = "yhuai@uci.edu"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.25.0",
+    "rich (>=14.3.2,<15.0.0)",
+]
+
+[tool.poetry]
+name = "taps-latex-check"
+packages = [{ include = "acm_taps_packages", from = "src" }]
+include = ["src/acm_taps_packages/data/*.json"]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.15.1"
+pre-commit = "^4.5.1"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6.0.0",
+    "pytest-cov>=2.0.0",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+taps-latex-check = "acm_taps_packages.cli:main"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+exclude = [
+    ".venv",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+# E = pycodestyle errors
+# F = pyflakes
+# I = import sorting (isort replacement)
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
