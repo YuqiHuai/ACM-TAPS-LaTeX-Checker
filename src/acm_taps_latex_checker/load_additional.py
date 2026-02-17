@@ -7,7 +7,7 @@ def load_additional_packages() -> List[str]:
     Load packages that are implicitly included by the ACM class file.
     """
     with (
-        resources.files("acm_taps_latex_check.data")
+        resources.files("acm_taps_latex_checker.data")
         .joinpath("additional.txt")
         .open("r", encoding="utf-8") as f
     ):

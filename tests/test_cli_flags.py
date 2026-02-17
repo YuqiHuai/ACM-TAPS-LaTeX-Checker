@@ -10,7 +10,7 @@ def test_cli_json_output(tmp_path):
         [
             sys.executable,
             "-m",
-            "acm_taps_latex_check.cli",
+            "acm_taps_latex_checker.cli",
             str(tex),
             "--json",
         ],
@@ -34,7 +34,7 @@ def test_cli_recursive(tmp_path):
         [
             sys.executable,
             "-m",
-            "acm_taps_latex_check.cli",
+            "acm_taps_latex_checker.cli",
             str(tmp_path),  # no --recursive
         ],
         capture_output=True,

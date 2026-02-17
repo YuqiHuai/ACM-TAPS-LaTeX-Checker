@@ -1,4 +1,4 @@
-from acm_taps_latex_check.validator import validate_tex_file
+from acm_taps_latex_checker.validator import validate_tex_file
 
 
 def test_validate_tex_file(tmp_path):

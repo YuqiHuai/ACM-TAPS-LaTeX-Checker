@@ -21,7 +21,7 @@ def test_cli_directory_validation(tmp_path):
     )
 
     result = subprocess.run(
-        [sys.executable, "-m", "acm_taps_latex_check.cli", str(tmp_path)],
+        [sys.executable, "-m", "acm_taps_latex_checker.cli", str(tmp_path)],
         capture_output=True,
         text=True,
     )

@@ -1,8 +1,8 @@
 import subprocess
 import sys
 
-from acm_taps_latex_check.load_additional import load_additional_packages
-from acm_taps_latex_check.load_local_list import load_local_list
+from acm_taps_latex_checker.load_additional import load_additional_packages
+from acm_taps_latex_checker.load_local_list import load_local_list
 
 
 def get_supported_non_duplicate_package():
@@ -30,7 +30,7 @@ def test_cli_detects_unsupported_package(tmp_path):
         [
             sys.executable,
             "-m",
-            "acm_taps_latex_check.cli",
+            "acm_taps_latex_checker.cli",
             str(tex_file),
         ],
         capture_output=True,
@@ -43,8 +43,8 @@ def test_cli_detects_unsupported_package(tmp_path):
 
 
 def test_cli_detects_duplicate_package(tmp_path):
-    from acm_taps_latex_check.load_additional import load_additional_packages
-    from acm_taps_latex_check.load_local_list import load_local_list
+    from acm_taps_latex_checker.load_additional import load_additional_packages
+    from acm_taps_latex_checker.load_local_list import load_local_list
 
     supported = set(load_local_list())
     additional = set(load_additional_packages())
@@ -69,7 +69,7 @@ def test_cli_detects_duplicate_package(tmp_path):
         [
             sys.executable,
             "-m",
-            "acm_taps_latex_check.cli",
+            "acm_taps_latex_checker.cli",
             str(tex_file),
         ],
         capture_output=True,
@@ -95,7 +95,7 @@ def test_cli_accepts_supported_packages(tmp_path):
         [
             sys.executable,
             "-m",
-            "acm_taps_latex_check.cli",
+            "acm_taps_latex_checker.cli",
             str(tex_file),
         ],
         capture_output=True,

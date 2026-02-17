@@ -15,7 +15,7 @@ def test_cli_outputs_line_numbers(tmp_path):
         [
             sys.executable,
             "-m",
-            "acm_taps_latex_check.cli",
+            "acm_taps_latex_checker.cli",
             str(tex),
         ],
         capture_output=True,

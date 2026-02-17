@@ -1,5 +1,5 @@
 [project]
-name = "acm_taps_latex_check"
+name = "acm_taps_latex_checker"
 version = "0.1.0"
 description = ""
 authors = [
@@ -14,8 +14,8 @@ dependencies = [
 
 [tool.poetry]
 name = "taps-latex-check"
-packages = [{ include = "acm_taps_latex_check", from = "src" }]
-include = ["src/acm_taps_latex_check/data/*.json"]
+packages = [{ include = "acm_taps_latex_checker", from = "src" }]
+include = ["src/acm_taps_latex_checker/data/*.json"]
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.15.1"
@@ -32,7 +32,7 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-taps-latex-check = "acm_taps_latex_check.cli:main"
+taps-latex-check = "acm_taps_latex_checker.cli:main"
 
 [tool.ruff]
 line-length = 88

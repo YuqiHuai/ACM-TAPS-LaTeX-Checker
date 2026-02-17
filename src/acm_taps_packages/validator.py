@@ -1,9 +1,9 @@
 from pathlib import Path
 from typing import Dict, List, Set
 
-from acm_taps_latex_check.latex_parser import extract_packages_with_lines
-from acm_taps_latex_check.load_additional import load_additional_packages
-from acm_taps_latex_check.load_local_list import load_local_list
+from acm_taps_latex_checker.latex_parser import extract_packages_with_lines
+from acm_taps_latex_checker.load_additional import load_additional_packages
+from acm_taps_latex_checker.load_local_list import load_local_list
 
 # -------------------------------------------------
 # Error Codes

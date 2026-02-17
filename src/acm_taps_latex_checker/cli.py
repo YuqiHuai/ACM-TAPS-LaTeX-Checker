@@ -7,7 +7,7 @@ from typing import Dict, List
 from rich.console import Console
 from rich.text import Text
 
-from acm_taps_latex_check.validator import (
+from acm_taps_latex_checker.validator import (
     DUPLICATE_CODE,
     UNSUPPORTED_CODE,
     validate_directory,

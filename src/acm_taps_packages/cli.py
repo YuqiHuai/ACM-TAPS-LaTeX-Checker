@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 from typing import Dict, List
 
-from acm_taps_latex_check.validator import (
+from acm_taps_latex_checker.validator import (
     DUPLICATE_CODE,
     UNSUPPORTED_CODE,
     validate_directory,
