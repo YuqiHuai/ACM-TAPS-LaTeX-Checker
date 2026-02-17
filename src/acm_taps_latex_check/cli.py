@@ -4,14 +4,15 @@ import sys
 from pathlib import Path
 from typing import Dict, List
 
+from rich.console import Console
+from rich.text import Text
+
 from acm_taps_latex_check.validator import (
     DUPLICATE_CODE,
     UNSUPPORTED_CODE,
     validate_directory,
     validate_tex_file_with_lines,
 )
-from rich.console import Console
-from rich.text import Text
 
 console = Console()
 

@@ -1,4 +1,4 @@
-from acm_taps_packages.load_local_list import load_local_list
+from acm_taps_latex_check.load_local_list import load_local_list
 
 
 def test_load_local_list_returns_list():

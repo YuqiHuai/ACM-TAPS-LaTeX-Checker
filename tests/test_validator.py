@@ -1,4 +1,4 @@
-from acm_taps_packages.validator import find_unsupported_packages
+from acm_taps_latex_check.validator import find_unsupported_packages
 
 
 def test_no_unsupported_packages():

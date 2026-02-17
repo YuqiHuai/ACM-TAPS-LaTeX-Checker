@@ -1,4 +1,4 @@
-from acm_taps_packages.latex_parser import extract_packages_with_lines
+from acm_taps_latex_check.latex_parser import extract_packages_with_lines
 
 
 def test_ignore_commented_packages():
